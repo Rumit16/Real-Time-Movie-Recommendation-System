@@ -1,0 +1,52 @@
+<head>
+  <title>moviereco-web</title>
+</head>
+
+<body>
+	<form class="new-user">
+		<input type="text" name="user">
+		<input type="submit" value="Submit">
+	</form>
+	<div style="float:left; width:50%;">
+	
+	<h3> Rating given by users</h3>
+	<div class="table-css">
+	<table style="text-align:center;">
+	<tr>
+		<td> Movie Id </td>
+		<td> Movie Name</td>
+		<td> User Rating </td>
+	</tr>
+	{{#each user_ratings}}
+	<tr>
+		<td>{{movieId}}</td> 
+		<td>{{movieName}}	</td>
+		<td>{{rating}}</td>
+			
+	</tr>
+	{{/each}}
+	</table>
+	</div>
+	</div>
+	<div  style="float:left; width:50%;">
+	
+	<h3> Prediction </h3>
+	<div class="table-css">
+	<table style="text-align:center;">
+	<tr>
+		<td> User Id </td>
+		<td> Movie Id </td>
+		<td> Rating </td>
+	</tr>
+	{{#each predictions}}
+	<tr>
+		<td>{{userId}}</td>
+		<td>{{movieId}}</td> 
+		<td>{{rating}}</td>
+			
+	</tr>
+	{{/each}}
+	</table>
+	</div>
+	</div>
+</body>
